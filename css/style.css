@@ -116,6 +116,10 @@ p {
     flex-direction: column;
 }
 
+.stat{
+    margin-top: 15px;
+}
+
 .status{
     font-size: 14px;
     font-weight: 700;
@@ -128,6 +132,7 @@ p {
 .stats{
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 .barra{
@@ -151,7 +156,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-right: 10px; */
 }
 
 .stats span{
