@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="js/script.js" defer></script>
     <title>PokeDex</title>
 </head>
 
@@ -13,19 +14,23 @@
 
     <main class="container-geral">
 
+        <form class="form">
+            <input type="text" class="input" placeholder="Pokemon or Número">
+        </form>
+
         <div class="container">
 
             <header class="pokemon-top">
-                <h2>pokemon</h2>
-                <p>#06</p>
+                <h2 class="nomePokemon"></h2>
+                <p class="idPokemon"></p>
             </header>
-
+            <img src="./image/pokeboll.png" alt="" class="test">
             <div class="imagePokemon">
-                <img src="/image/pokemon.svg" alt="nome do pokemon">
+                <img class="pokemonImage" src="#" alt="nome do pokemon">
             </div>
-            <div class="botao">
-                <button class="btn fire">Fire</button>
-                <button class="btn flying">Flying</button>
+            <div class="types">
+                <!-- <button class="type btn-fire">fire</button>
+                <button class="type btn-flying">flying</button> -->
             </div>
             <div class="status-geral">
                 <div class="status">
@@ -37,42 +42,42 @@
                         <div class="barra">
                             <div class="barra1"></div>
                         </div>
-                        <p class="pp">32</p>
+                        <p class="pp" id="pHp">32</p>
                     </div>
                     <div class="stats">
                         <span class="hp">attack</span>
                         <div class="barra">
-                            <div class="barra1 fire"></div>
+                            <div class="barra1"></div>
                         </div>
-                        <p class="pp">32</p>
+                        <p class="pp" id="pAtk">32</p>
                     </div>
                     <div class="stats">
                         <span class="hp">defense</span>
                         <div class="barra">
                             <div class="barra1"></div>
                         </div>
-                        <p class="pp">32</p>
+                        <p class="pp" id="pDef">32</p>
                     </div>
                     <div class="stats">
                         <span class="hp">spe-atk</span>
                         <div class="barra">
                             <div class="barra1"></div>
                         </div>
-                        <p class="pp">32</p>
+                        <p class="pp" id="pEsp_atk">32</p>
                     </div>
                     <div class="stats">
                         <span class="hp">spe-def</span>
                         <div class="barra">
                             <div class="barra1"></div>
                         </div>
-                        <p class="pp">32</p>
+                        <p class="pp" id="pEsp_def">32</p>
                     </div>
                     <div class="stats">
                         <span class="hp">speed</span>
                         <div class="barra">
                             <div class="barra1"></div>
                         </div>
-                        <p class="pp">32</p>
+                        <p class="pp" id="pSpeed">32</p>
                     </div>
                 </div>
             </div>

@@ -34,6 +34,40 @@ main {
 .container-geral {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    width: 333px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .input {
+    width: 100%;
+    margin-right: .5rem;
+    padding: .5rem;
+    color: var(--principal);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Fira code', monospace;
+    outline: none;
+    border-radius: .5rem;
+    border: var(--principal);
+}
+
+.btn-input {
+    padding: .5rem;
+    padding: .5rem;
+    color: var(--principal);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Fira code', monospace;
+    border-radius: .5rem;
+    border: var(--principal);
 }
 
 .container {
@@ -44,6 +78,8 @@ main {
     background-color: var(--fundo-principal);
     width: 333px;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -61,8 +97,15 @@ header {
     padding: 0 15px 0 15px;
 }
 
+.test{
+    width: 90%;
+    top: 45px;
+    /* position: absolute; */
+    z-index: -1;
+}
+
 h2 {
-    font-size: 32px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: white;
     text-transform: uppercase;
@@ -75,37 +118,36 @@ p {
 }
 
 .imagePokemon {
-    margin-top: 34px;
+    width: 80%;
+    position: absolute;
+    top: 60px;
 }
 
-.botao {
+.imagePokemon .pokemonImage{
+    width: 100%;
+}
+
+.types {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin: 20px 0 15px 0;
+    margin: 0px 0 15px 0;
 }
 
-.botao .btn {
+.types .type {
     width: 81px;
     height: 28px;
     border: none;
     border-radius: 50px;
     font-size: 14px;
     font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 1rem;
 }
 
-.fire {
-    background: var(--fire);
-    color: white;
-}
 
-.flying{
-    background: var(--flying);
-    color: black;
-}
-
-.status-geral{
+.status-geral {
     background-color: white;
     width: 95%;
     border-radius: 10px;
@@ -116,11 +158,11 @@ p {
     flex-direction: column;
 }
 
-.stat{
+.stat {
     margin-top: 15px;
 }
 
-.status{
+.status {
     font-size: 14px;
     font-weight: 700;
     color: var(--principal);
@@ -129,13 +171,13 @@ p {
     border-radius: 5px;
 }
 
-.stats{
+.stats {
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 
-.barra{
+.barra {
     width: 100%;
     height: 8px;
     background-color: var(--fundoBarra);
@@ -147,35 +189,36 @@ p {
     margin-right: 10px;
 }
 
-.barra1{
+.barra1 {
     width: 50%;
     height: 8px;
     background-color: var(--fire);
     border-radius: 5px;
+    transition: width .5s ease-in-out;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.stats span{
+.stats span {
     width: 40%;
     font-size: 14px;
     font-weight: 700;
     color: var(--principal);
 }
 
-.pp{
+.pp {
     font-size: 14px;
     font-weight: 700;
     color: var(--principal);
 }
 
-.btn-final{
+.btn-final {
     padding: 10px 0 10px 0;
 }
 
-.btn-final button{
+.btn-final button {
     width: 80px;
     height: 24px;
     border-radius: 5px;
@@ -189,7 +232,7 @@ p {
 
 }
 
-button:hover{
+.btn-final button:hover {
     background-color: #FF704D;
     transition: .5s;
 }
