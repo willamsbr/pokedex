@@ -5,13 +5,6 @@
     --fundo-principal: #C6C6C6;
     --header: linear-gradient(130deg, #302F2F 40%, #FF704D 0%);
     --fundoBarra: #D8D8D8;
-
-
-
-    /* TIPOS #3DC7EF */
-
-    --fire: #FD7D24;
-    --flying: linear-gradient(180deg, #3DC7EF 50%, #BDB9B8 60%);
 }
 
 * {
@@ -100,7 +93,6 @@ header {
 .test{
     width: 90%;
     top: 45px;
-    /* position: absolute; */
     z-index: -1;
 }
 
