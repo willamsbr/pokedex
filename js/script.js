@@ -65,7 +65,7 @@ const renderPokemon = async (pokemon) => {
         primeiroPokemon = data.id;
 
         data.types.forEach((t) => {
-        tipos.style.display = 'block';
+            tipos.style.display = 'block';
 
             let novoTipo = document.createElement('button');
             novoTipo.innerHTML = t.type.name;
@@ -75,13 +75,13 @@ const renderPokemon = async (pokemon) => {
                 `rgb(${typeColors[t.type.name][0]},
                 ${typeColors[t.type.name][1]},
                 ${typeColors[t.type.name][2]})`
-                
+
         });
 
         const barraColor = typeColors[data.types[0].type.name];
 
-        container.style.backgroundColor = 
-         `rgba(${barraColor[0]},${barraColor[1]},${barraColor[2]},.3)`;
+        container.style.backgroundColor =
+            `rgba(${barraColor[0]},${barraColor[1]},${barraColor[2]},.3)`;
 
         data.stats.forEach((s, i) => {
             ppStats[i].innerHTML = s.base_stat;
@@ -97,7 +97,7 @@ const renderPokemon = async (pokemon) => {
         pokemonImage.style.display = 'none';
         tipos.style.display = 'none';
         input.value = "";
-        
+
     }
 }
 
@@ -106,14 +106,16 @@ form.addEventListener('submit', (event) => {
     renderPokemon(input.value.toLowerCase());
 });
 botaoPv.addEventListener('click', () => {
-    if(primeiroPokemon > 1){
+    if (primeiroPokemon > 1) {
         primeiroPokemon--
         renderPokemon(primeiroPokemon);
     }
 });
 botaoVt.addEventListener('click', () => {
-    primeiroPokemon++;
-    renderPokemon(primeiroPokemon);
+    if (primeiroPokemon < 905) {
+        primeiroPokemon++;
+        renderPokemon(primeiroPokemon);
+    }
 });
 
 renderPokemon(primeiroPokemon);
